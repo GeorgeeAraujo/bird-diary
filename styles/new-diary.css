@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('./global.css');
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.diary{
+    align-items:normal;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3em 0;
+    
+}
+
+.diary label{
+    font-size: 25px;
+}
+
+.diary__field{
+    width: 70%;
+}
+
+.diary-first-column{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 0 0 3em;
+}
+
+.diary-second-column{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+
+.bigger-field{
+    height: 30%;
+}
+
+.diary__btn{
+    padding: 0.2em 1em;
+    text-align: center;
+    font-size: 32px;
+    width: 40%;
+}
+

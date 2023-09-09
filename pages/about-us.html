@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/about-us.css">
+    <title>About us</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="logo__img" src="/img/image 1.svg">
+            <h2 class="logo_name">Bird Diary</h2>
+    </div>
+        <nav class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
+                <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
+                <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
+                <li class="menu__item"><a class="menu__link" onclick="logoutUser(event)">Sair</a></li>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="container__title">About us</h1>
+        <section class="about-content">
+            <div class="about-content__logo">
+                <img class="about-content__img" src="../img/image 5.svg">
+                <h2 class="about-content__title">Bird Diary</h2>
+            </div>
+
+            <div class="about-content__text">
+                <p>Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Contact us</p>
+        </footer>
+    </main>
+    <!--Início dos scripts do firebase-->
+        <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+    <!--Fim dos scripts do firebase-->
+    
+    <script src="../scripts/initFirebase.js"></script>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/auth-guard.js"></script>
+    <script src="./scripts/loading.js"></script>
+    
+</body>
+</html>

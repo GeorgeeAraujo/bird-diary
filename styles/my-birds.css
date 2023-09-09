@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('./global.css');
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.filter{
+    display: flex;
+    gap: 3em;
+    margin: 3em;
+    align-items: center;
+}
+
+.filter__title{
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.filter__btn{
+    font-size: 24px;
+    color: var(--primary-color);
+    background-color: var(--fifth-color);
+    border: 0;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    width: 140px;
+}
+
+
+.birds-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3em;
+}
+
+.bird{
+    background-color: var(--fourth-color);
+    padding: 1em;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+}
+
+.bird:hover{
+    .delete-btn{
+        display: block;
+    }
+    opacity: 0.9;
+}
+
+.bird__image{
+    width: 314px;
+    height: 213px;
+}
+
+.bird__info{
+    padding: 0.3em;
+}
+
+.delete-btn{
+    width: 6em;
+    display: none;
+    float:right;
+    color: var(--primary-color);
+    background-color: var(--fifth-color);
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover{
+    opacity: 0.7;
+}
+
+
+

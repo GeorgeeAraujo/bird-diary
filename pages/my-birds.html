@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/my-birds.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>My birds</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="logo__img" src="/img/image 1.svg">
+            <h2 class="logo_name">Bird Diary</h2>
+    </div>
+        <nav class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
+                <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
+                <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
+                <li class="menu__item"><a class="menu__link" onclick="logoutUser()">Log out</a></li>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h1 class="container__title">My birds</h1>
+    
+    <section class="filter">
+        <h2 class="filter__title">Filter</h2>
+        <button class="filter__btn">Date</button>
+        <button class="filter__btn">Bird</button>
+        <button class="filter__btn">Place</button>
+    </section>
+    <section class="birds-list" id="birds-list"></section>
+    </main>
+
+    <footer>
+        <p>Contact us</p>
+    </footer>
+
+<!--Início dos scripts do firebase-->
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
+    <script src="../scripts/initFirebase.js"></script>
+<!--Fim dos scripts do firebase-->
+
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/auth-guard.js"></script>
+    <script src="../scripts/loading.js"></script>
+    <script src="../scripts/my-birds.js"></script>
+    
+
+</body>
+</html>

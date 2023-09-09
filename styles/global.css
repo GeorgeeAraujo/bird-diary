@@ -1,0 +1,143 @@
+:root{
+    --main-font: 'Nanum Myeongjo';
+    --second-font: 'Jim Nightshade';
+    --primary-color: #FFFFFF;
+    --second-color: #C1C7C8; 
+    --third-color: #3F4E57;
+    --fourth-color: #D9D9D9;
+    --fifth-color: #7C96A6
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--main-font);
+    
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--primary-color);
+}
+
+.container__title{
+    background-color: var(--second-color);
+    text-align: center;
+    font-size: 40px;
+    padding: 0.5em;
+    font-weight: 400;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo__name{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.menu__list{
+    display: flex;
+    list-style: none;
+    gap: 1.8em;
+    font-size: 24px;
+}
+
+.menu__item{
+    background-color: var(--third-color);
+    padding: 0.5em 1em;
+    border-radius: 30px;
+}
+
+.menu__item:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+footer{
+    background-color: var(--second-color);
+    text-align: right;
+    padding: 1.5em;
+    font-family: var(--main-font);
+    margin-bottom: auto;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__field{
+    width: 45%;
+    padding: 0.5em;
+    background-color: var(--fourth-color);
+    border: 0;
+    text-align: center;
+}
+
+.form label{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+}
+
+.btn-solid{
+    color: var(--primary-color);
+    font-size: 24px;
+    background-color: var(--third-color);
+    border: 0;
+    width: 20%;
+    border-radius: 30px;
+    margin: 1em;
+    padding: 0.2em 1em;
+    font-family: var(--main-font);
+}
+
+.btn-solid:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn-clear{
+    margin: 0.5em;
+    background-color: var(--primary-color);
+    border: 0;
+    font-size: 16px;
+    font-family: var(--main-font);
+}
+
+.btn-clear:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.loading{ 
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+.centralize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

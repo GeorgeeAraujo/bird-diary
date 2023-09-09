@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Nanum+Myeongjo&display=swap');;
+@import url('./global.css');
+
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.about-content{
+    display: flex;
+    gap: 5%;
+    margin: 3em;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.about-content__logo{
+    gap: 5%;
+    text-align: center;
+    background-color: var(--fourth-color);
+
+}
+
+.about-content__title{
+    font-family: var(--second-font);
+    font-size: 70px;
+}
+
+.about-content__img{
+    margin: 1em;
+    width: 70%;
+}
+
+.about-content__text{
+    font-size: 24px;
+    width: 50%;
+}
