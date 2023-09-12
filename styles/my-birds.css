@@ -28,6 +28,38 @@ body{
     width: 140px;
 }
 
+.filter-search{
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+.filter-search-field{
+    width: 40%;
+    padding: 0.3em;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0.5px solid ;
+
+}
+
+.filter-search-btn{
+    font-size: 20px;
+    padding: 0.5em;
+    font-family: var(--second-font);
+    background-color: var(--second-color);
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.filter-search-btn:hover{
+    opacity: 0.8;
+}
 
 .birds-list{
     display: flex;
