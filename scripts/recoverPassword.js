@@ -1,4 +1,10 @@
-isAlreadyLogged('./my-birds.html');
+firebase.auth()
+    .onAuthStateChanged((user) => {
+        if(user){
+            window.location.href= './my-birds.html'
+        };
+    });
+
 const recoverForm = { /* Objeto que contém todos os elementos HTML do formulário de recuperação de senha.*/
     email: ()=> document.getElementById('recovery-email').value,
     recoverBtn: () => document.getElementById('recovery-password-btn'),

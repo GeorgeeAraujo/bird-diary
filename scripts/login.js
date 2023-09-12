@@ -1,4 +1,10 @@
-isAlreadyLogged('./pages/my-birds.html');
+firebase.auth()
+    .onAuthStateChanged((user) => {
+        if(user){
+            window.location.href= './pages/my-birds.html'
+        };
+    });
+
 
 const loginForm = { /* Objeto que contém todos os elementos HTML relacionados ao login. */
     email: () => document.getElementById('email').value,
@@ -26,14 +32,6 @@ async function login(){ /*Função que faz a comunicação com o firebase authen
         alert(getErrorMessage(error.code))});
 };
 
-function isAlreadyLogged(path){ /*Função que identifica se o usuário já está logado e, se sim, redireciona para a página principal.*/
-    firebase.auth()
-    .onAuthStateChanged((user) => {
-        if(user){
-            window.location.href= `${path}`
-        };
-    });
-};
 
 
 

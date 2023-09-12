@@ -1,4 +1,10 @@
-isAlreadyLogged('./my-birds.html');
+firebase.auth()
+    .onAuthStateChanged((user) => {
+        if(user){
+            window.location.href= './my-birds.html'
+        };
+    });
+
 const newUserForm = { /* Objeto com todos os elementos HTML do processo de criação de novo usuário. */
     email: () => document.getElementById('new-email').value,
     invalidEmailError: () => document.getElementById('new-account-invalid-email-error'),
