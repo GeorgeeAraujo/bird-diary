@@ -1,7 +1,7 @@
 firebase.auth()
     .onAuthStateChanged((user) => {
         if(user){
-            window.location.href= './my-birds.html'
+            window.location.href= '../pages/my-birds.html'
         };
     });
 
