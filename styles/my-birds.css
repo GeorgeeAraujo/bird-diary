@@ -26,6 +26,11 @@ body{
     padding: 0.5em 1em;
     border-radius: 30px;
     width: 140px;
+    cursor: pointer;
+}
+
+.filter__btn:hover{
+    opacity: 0.8;
 }
 
 .filter-search{

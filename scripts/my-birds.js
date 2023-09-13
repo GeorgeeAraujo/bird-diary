@@ -4,6 +4,8 @@ firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário loga
     };
 });
 
+let birdsToFilter = [];
+
 function findBirds(user){ /* Função que cria realiza a busca no banco de dados, de acordo com o usuário.*/
     showLoading();
     firebase.firestore()
@@ -24,6 +26,7 @@ function findBirds(user){ /* Função que cria realiza a busca no banco de dados
         console.log(error);
         alert('Error on loading your birds! Please, try again.')
     });
+    
 };
 
 function createBirdsOnScreen(birds){ /* Função que cria os elementos na tela, com as informações resgatadas do database.*/
