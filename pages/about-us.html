@@ -18,7 +18,7 @@
                 <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
                 <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
                 <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
-                <li class="menu__item"><a class="menu__link" onclick="logoutUser(event)">Sair</a></li>
+                <li class="menu__item"><a class="menu__link" onclick="logoutUser()">Log out</a></li>
         </nav>
     </header>
 
@@ -42,12 +42,14 @@
     <!--Início dos scripts do firebase-->
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+        <script src="../scripts/initFirebase.js"></script>
     <!--Fim dos scripts do firebase-->
+
     
-    <script src="../scripts/initFirebase.js"></script>
+    <script src="../scripts/loading.js"></script>
     <script src="../scripts/logout.js"></script>
     <script src="../scripts/auth-guard.js"></script>
-    <script src="./scripts/loading.js"></script>
+    
     
 </body>
 </html>
