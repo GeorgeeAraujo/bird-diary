@@ -13,12 +13,9 @@ function filter(id){
     } else if (id == 'filter-oldest'){
         hideFilterSearchBar();
         filterByOldest();
-    } else if (id == 'filter-bird'){
+    } else{
         showFilterSearchBar();
-        filterByBird();
-    } else if (id == 'filter-place'){
-        showFilterSearchBar();
-        filterByPlace();
+        filterBySearch();
     };
 };
 
@@ -32,65 +29,19 @@ function hideFilterSearchBar(){
     searchBar.style.display = "none";
 };
 
-function filterByBird(){
+function filterBySearch(){
     const searchBtn = document.getElementById('search-btn');
     const searchField = document.getElementById('search-field');
     searchBtn.addEventListener('click',()=>{
+        let birds = Array.from(document.querySelectorAll('.bird'));
         const keyword = searchField.value;
-        showLoading();
-        firebase.firestore()
-        .collection('birds')
-        .where('user.uid', '==', userLogged.uid)
-        .where('popname', '==', keyword)
-    .get()
-        .then(snapshot => {
-            hideLoading();
-            const birds = snapshot.docs.map((doc) => ({
-                ...doc.data(),
-                uid:doc.id
-         }));
-            const birdsList = document.getElementById('birds-list');
-            birdsList.innerHTML = '';
-            createBirdsOnScreen(birds);
-            })
-        .catch(error => {
-            hideLoading();
-            console.log(error);
-            alert('Error on loading your birds! Please, try again.')
-        });
-    
+        birds.forEach(bird => bird.style.display = 'block');
+        let birdsFiltered = birds.filter(bird => !bird.innerText.includes(keyword))
+        birdsFiltered.forEach(bird => bird.style.display = 'none')
+        console.log(birdsFiltered)
     });
 }
 
-function filterByPlace(){
-    const searchBtn = document.getElementById('search-btn');
-    const searchField = document.getElementById('search-field');
-    searchBtn.addEventListener('click',()=>{
-        const keyword = searchField.value;
-        showLoading();
-        firebase.firestore()
-        .collection('birds')
-        .where('user.uid', '==', userLogged.uid)
-        .where('place', '==', keyword)
-    .get()
-        .then(snapshot => {
-            hideLoading();
-            const birds = snapshot.docs.map((doc) => ({
-                ...doc.data(),
-                uid:doc.id
-         }));
-            const birdsList = document.getElementById('birds-list');
-            birdsList.innerHTML = '';
-            createBirdsOnScreen(birds);
-            })
-        .catch(error => {
-            hideLoading();
-            console.log(error);
-            alert('Error on loading your birds! Please, try again.')
-        });
-    
-    });
-}
 
 function filterByNewest(){
     showLoading();
