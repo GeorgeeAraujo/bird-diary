@@ -7,12 +7,12 @@ firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário loga
 
 
 function filter(id){
-    if(id == 'filter-newest'){
+    if(id == 'show-all'){
         hideFilterSearchBar();
-        filterByNewest();
+        findBirds(userLogged);
     } else if (id == 'filter-oldest'){
         hideFilterSearchBar();
-        filterByOldest();
+        sortByOldest();
     } else{
         showFilterSearchBar();
         filterBySearch();
@@ -30,20 +30,23 @@ function hideFilterSearchBar(){
 };
 
 function filterBySearch(){
+    removeClickedClass(filterBtns);
+    addClickedClass(filterBtnsObject.search());
+    showLoading();
     const searchBtn = document.getElementById('search-btn');
     const searchField = document.getElementById('search-field');
     searchBtn.addEventListener('click',()=>{
-        let birds = Array.from(document.querySelectorAll('.bird'));
+        let birds = getBirdsElements();
         const keyword = searchField.value;
-        birds.forEach(bird => bird.style.display = 'block');
-        let birdsFiltered = birds.filter(bird => !bird.innerText.includes(keyword))
-        birdsFiltered.forEach(bird => bird.style.display = 'none')
-        console.log(birdsFiltered)
+        birds.forEach(bird => showBirdElement(bird));
+        let birdsDontMatch = birds.filter(bird => !bird.innerText.includes(keyword))
+        birdsDontMatch.forEach(bird => hideBirdElement(bird))
     });
+    hideLoading();
 }
 
 
-function filterByNewest(){
+function showAllBirds(){
     showLoading();
     firebase.firestore()
     .collection('birds')
@@ -67,8 +70,11 @@ function filterByNewest(){
     });
 }
 
-function filterByOldest(){
+function sortByOldest(){
         showLoading();
+        removeClickedClass(filterBtns);
+        addClickedClass(filterBtnsObject.oldest())
+    firebase.firestore()
         firebase.firestore()
         .collection('birds')
         .where('user.uid', '==', userLogged.uid)
@@ -90,3 +96,23 @@ function filterByOldest(){
             alert('Error on loading your birds! Please, try again.')
         });
 }
+
+function isSearchEmpty(){
+    const searchField = document.getElementById('search-field');
+    if(searchField.value == ''){
+        let birds = getBirdsElements();
+        birds.forEach(bird => showBirdElement(bird));
+    };
+};
+
+function getBirdsElements(){
+    return Array.from(document.querySelectorAll('.bird'));
+};
+
+function showBirdElement(element){
+    element.style.display = 'block';
+};
+
+function hideBirdElement(element){
+    element.style.display = 'none';
+};

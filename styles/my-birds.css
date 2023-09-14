@@ -11,6 +11,7 @@ body{
     gap: 3em;
     margin: 3em;
     align-items: center;
+    justify-content: center;
 }
 
 .filter__title{
@@ -109,6 +110,10 @@ body{
 
 .delete-btn:hover{
     opacity: 0.7;
+}
+
+.clicked{
+    background-color: var(--third-color);
 }
 
 

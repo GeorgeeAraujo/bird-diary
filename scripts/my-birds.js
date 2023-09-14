@@ -1,13 +1,20 @@
+const filterBtns = Array.from(document.querySelectorAll('.filter__btn'));
+const filterBtnsObject = {
+    all: ()=> document.getElementById('show-all'),
+    oldest:()=> document.getElementById('filter-oldest'),
+    search: ()=> document.getElementById('search-btn-filter')
+}
 firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/
     if(user){
         findBirds(user);
     };
 });
 
-let birdsToFilter = [];
 
 function findBirds(user){ /* Função que cria realiza a busca no banco de dados, de acordo com o usuário.*/
     showLoading();
+    removeClickedClass(filterBtns);
+    addClickedClass(filterBtnsObject.all())
     firebase.firestore()
     .collection('birds')
     .where('user.uid', '==', user.uid)
@@ -31,6 +38,7 @@ function findBirds(user){ /* Função que cria realiza a busca no banco de dados
 
 function createBirdsOnScreen(birds){ /* Função que cria os elementos na tela, com as informações resgatadas do database.*/
     const birdsList = document.getElementById('birds-list');
+    birdsList.innerHTML = '';
     birds.forEach((bird) => {
         const birdDiv = document.createElement('div');
         birdDiv.classList.add("bird");
@@ -113,4 +121,14 @@ function removeImage(path){ /* Função que remove a imagem do pássaro desejado
         .catch((error) => console.log(error));
 };
 
+function addClickedClass(element){
+    element.classList.add('clicked');
+};
 
+function removeClickedClass(element){
+    if(typeof element == "object"){
+        element.forEach(el => el.classList.remove('clicked'));
+    } else{
+        element.classList.remove('clicked');
+    };
+};
