@@ -116,5 +116,14 @@ body{
     background-color: var(--third-color);
 }
 
+.no-birds-message{
+    display: flex;
+    font-size: 30px;
+    width: 100%;
+    padding: 20%;
+    justify-content: center;
+    text-align: center;
+}
+
 
 
