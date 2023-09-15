@@ -39,8 +39,13 @@ function filterBySearch(){
         let birds = getBirdsElements();
         const keyword = searchField.value;
         birds.forEach(bird => showBirdElement(bird));
-        let birdsDontMatch = birds.filter(bird => !bird.innerText.includes(keyword))
-        birdsDontMatch.forEach(bird => hideBirdElement(bird))
+        let birdsDontMatch = birds.filter(bird => !bird.innerText.includes(keyword));
+        if(birds.length != birdsDontMatch.length){
+            birdsDontMatch.forEach(bird => hideBirdElement(bird))
+        } else {
+            alert('No birds were found! Try again.')
+        }
+        
     });
     hideLoading();
 }
