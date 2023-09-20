@@ -6,6 +6,8 @@ body{
     flex-direction: column;
     min-height: 100%;
 }
+
+
 .filter{
     display: flex;
     gap: 3em;

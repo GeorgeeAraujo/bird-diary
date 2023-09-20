@@ -7,10 +7,13 @@ firebase.auth()
 
 const recoverForm = { /* Objeto que contém todos os elementos HTML do formulário de recuperação de senha.*/
     email: ()=> document.getElementById('recovery-email').value,
+    goToRecoverBtn: ()=> document.getElementById('go-to-recover-btn'),
     recoverBtn: () => document.getElementById('recovery-password-btn'),
     invalidRecoveryEmailError: ()=> document.getElementById('invalid-recovery-email-error'),
     obrigatoryRecoveryEmailError: ()=> document.getElementById('obrigatory-recovery-email-error')
 };
+
+
 
 recoverForm.recoverBtn().addEventListener('click', e => { /* Ouvinte de eventos que chama a função de enviar o emailde recuperação quando o usuário clica no botão..*/
     e.preventDefault();

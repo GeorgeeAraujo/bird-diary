@@ -13,7 +13,9 @@ const loginForm = { /* Objeto que contém todos os elementos HTML relacionados a
     loginButton: () => document.getElementById('login-btn'),
     obrigatoryEmail: () => document.getElementById('obrigatory-email-error'),
     invalidPassword: () => document.getElementById('invalid-password-error'),
-    obrigatoryPassword: () => document.getElementById('obrigatory-password-error')
+    obrigatoryPassword: () => document.getElementById('obrigatory-password-error'),
+    recoverBtn: ()=> document.getElementById('go-to-recover-btn'),
+    createAccountBtn: ()=> document.getElementById('go-to-create-account-btn')
 };
 
 /* Chamada da função de login ao clicar no botão de Login */
@@ -21,6 +23,16 @@ loginForm.loginButton().addEventListener('click', (event)=>{
     event.preventDefault();
     login();
 });
+
+loginForm.recoverBtn().addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.location.href = "../pages/recover-password.html";
+})
+
+loginForm.createAccountBtn().addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.location.href = "../pages/create-an-account.html";
+})
 
 async function login(){ /*Função que faz a comunicação com o firebase authentication para a realização do login ou não.*/ 
     showLoading();

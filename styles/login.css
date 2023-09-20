@@ -57,3 +57,20 @@ body{
     cursor: auto;
 }
 
+@media screen and (max-width: 400px){
+    .banner{
+        display: none;
+    }
+
+    .login{
+        gap: 50px;
+    }
+
+    .login__img{
+        width: 120px;
+    }
+
+    .login__name{
+        font-size: 40px;
+    }
+}

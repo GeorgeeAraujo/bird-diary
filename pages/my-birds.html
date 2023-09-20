@@ -8,36 +8,35 @@
     <title>My birds</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img class="logo__img" src="/img/image 1.svg">
-            <h2 class="logo_name">Bird Diary</h2>
-    </div>
-        <nav class="header__menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
-                <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
-                <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
-                <li class="menu__item"><a class="menu__link" onclick="logoutUser()">Log out</a></li>
-        </nav>
-    </header>
+        <header class="header">
+            <div class="logo">
+                <img class="logo__img" src="/img/image 1.svg">
+                <h2 class="logo_name">Bird Diary</h2>
+        </div>
+            <nav class="header__menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
+                    <li class="menu__item"><a class="menu__link" onclick="logoutUser()">Log out</a></li>
+            </nav>
+        </header>
 
-    <main class="container">
+        <main class="container">
 
-        <h1 class="container__title">My birds</h1>
-    
-    <section class="filter">
-        <button class="filter__btn" id="show-all" onclick="filter(id)">All</button>
-        <button class="filter__btn" id="filter-oldest" onclick="filter(id)">Oldest</button>
-        <button class="filter__btn" id="search-btn-filter" onclick="filter(id)">Search</button>
-    </section>
-    <div class="filter-search" id="search">
-        <input type="search" class="filter-search-field" id="search-field" onchange="isSearchEmpty()">
-        <button class="filter-search-btn" id="search-btn">Search</button>
-    </div>
-    <section class="birds-list" id="birds-list"></section>
-    </main>
-
+            <h1 class="container__title">My birds</h1>
+        
+        <section class="filter">
+            <button class="filter__btn" id="show-all" onclick="filter(id)">All</button>
+            <button class="filter__btn" id="filter-oldest" onclick="filter(id)">Oldest</button>
+            <button class="filter__btn" id="search-btn-filter" onclick="filter(id)">Search</button>
+        </section>
+        <div class="filter-search" id="search">
+            <input type="search" class="filter-search-field" id="search-field" onchange="isSearchEmpty()">
+            <button class="filter-search-btn" id="search-btn">Search</button>
+        </div>
+        <section class="birds-list" id="birds-list"></section>
+        </main>
     <footer>
         <p>Contact us</p>
     </footer>
