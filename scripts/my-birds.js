@@ -1,4 +1,5 @@
 const filterBtns = Array.from(document.querySelectorAll('.filter__btn'));
+
 const filterBtnsObject = {
     all: ()=> document.getElementById('show-all'),
     oldest:()=> document.getElementById('filter-oldest'),
@@ -155,3 +156,35 @@ function createNoBirdsMessage(){
     birdsList.appendChild(noBirdsMessage)
 
 }
+
+/*MOBILE CODE */
+
+if(window.matchMedia("(max-width:400px").matches){
+    const hambMenuIcon = document.getElementById('hamb-menu-icon');
+    const listMenu = document.getElementById('list-menu');
+    hambMenuIcon.addEventListener('click', ()=>{
+        toggleHambMenu();
+    })
+
+    function toggleHambMenu(){
+        const classListHambMenu = Array.from(hambMenuIcon.classList);
+        if(menuClickedClassIsThere(classListHambMenu)){
+            listMenu.style.display = 'none';
+            hambMenuIcon.classList.remove('menu-clicked');
+        } else if (!menuClickedClassIsThere(classListHambMenu)){
+            showMenuList();
+            hambMenuIcon.classList.add('menu-clicked');
+        }
+    }
+
+    function menuClickedClassIsThere(classList){
+        return classList.includes('menu-clicked');
+    }
+
+    function showMenuList(){
+        listMenu.style.display = 'block';
+        listMenu.style.position = 'absolute';
+        listMenu.style.top = '100%';
+    }
+}
+

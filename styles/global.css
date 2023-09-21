@@ -70,6 +70,10 @@ body{
     color: var(--primary-color);
 }
 
+.header__menu-hamb{
+    display: none;
+}
+
 footer{
     background-color: var(--second-color);
     text-align: right;
@@ -156,6 +160,36 @@ footer{
 
     .btn-solid{
         width: 30%;
+    }
+    .logo{
+        display: block;
+    }
+    .header{
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .logo_name{
+        display: none;
+    }
+
+    .logo__img{
+        width: 60%;
+    }
+    .menu__list{
+        display: none;
+    }
+
+    .header__menu-hamb{
+        display: block;
+        width: 40px;
+    }
+
+    .menu__item{
+        background-color: var(--third-color);
+        width: 100%;
+        border-radius: 0px;
     }
 }
 
