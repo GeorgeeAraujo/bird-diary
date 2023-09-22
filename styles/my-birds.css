@@ -127,5 +127,20 @@ body{
     text-align: center;
 }
 
+@media screen and (max-width:400px){
+    .filter__btn{
+        font-size: 16px;
+    }
+
+    .delete-btn{
+        display: block;
+    }
+
+    .bird__image{
+        width: 300px;
+        height: 200px;
+    }
+}
+
 
 

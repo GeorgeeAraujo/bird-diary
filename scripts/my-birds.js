@@ -113,8 +113,8 @@ function removeBird(bird){ /* Função que deleta o documento desejado do databa
         hideLoading();
         document.getElementById(bird.uid).remove();
         removeImage(bird.storagePath);
-        const birds = Array.from(document.querySelectorAll('birds'));
-        if(birds.length == 0){
+        const birds = Array.from(document.querySelectorAll('.bird'));
+        if(areThereBirdsToShow(birds) == 0){
             createNoBirdsMessage()
         }
     })
@@ -159,32 +159,4 @@ function createNoBirdsMessage(){
 
 /*MOBILE CODE */
 
-if(window.matchMedia("(max-width:400px").matches){
-    const hambMenuIcon = document.getElementById('hamb-menu-icon');
-    const listMenu = document.getElementById('list-menu');
-    hambMenuIcon.addEventListener('click', ()=>{
-        toggleHambMenu();
-    })
-
-    function toggleHambMenu(){
-        const classListHambMenu = Array.from(hambMenuIcon.classList);
-        if(menuClickedClassIsThere(classListHambMenu)){
-            listMenu.style.display = 'none';
-            hambMenuIcon.classList.remove('menu-clicked');
-        } else if (!menuClickedClassIsThere(classListHambMenu)){
-            showMenuList();
-            hambMenuIcon.classList.add('menu-clicked');
-        }
-    }
-
-    function menuClickedClassIsThere(classList){
-        return classList.includes('menu-clicked');
-    }
-
-    function showMenuList(){
-        listMenu.style.display = 'block';
-        listMenu.style.position = 'absolute';
-        listMenu.style.top = '100%';
-    }
-}
 

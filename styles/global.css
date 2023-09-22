@@ -80,6 +80,7 @@ footer{
     padding: 1.5em;
     font-family: var(--main-font);
     width: 100%;
+    margin-top: auto;
     box-sizing: border-box;
 }
 
@@ -149,6 +150,7 @@ footer{
     align-items: center;
 }
 
+
 @media screen and (max-width:400px){
     .form label{
         font-size: 20px;
@@ -191,5 +193,10 @@ footer{
         width: 100%;
         border-radius: 0px;
     }
+
+    .container__title{
+        font-size: 30px;
+    }
+
 }
 
