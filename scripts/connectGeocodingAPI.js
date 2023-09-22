@@ -12,6 +12,7 @@ async function getCoordinates(){ /* Acessa, a partir da API Geocoding, informaç
         } catch(error){
             console.log(error);
             alert('Place not found! Try again');
+            hideLoading();
         };
     };
 };
