@@ -1,4 +1,4 @@
-if(window.matchMedia("(max-width:400px").matches){
+if(window.matchMedia("(max-width:1024px").matches){
     const hambMenuIcon = document.getElementById('hamb-menu-icon');
     const listMenu = document.getElementById('list-menu');
     hambMenuIcon.addEventListener('click', ()=>{
@@ -24,6 +24,7 @@ if(window.matchMedia("(max-width:400px").matches){
         listMenu.style.display = 'block';
         listMenu.style.position = 'absolute';
         listMenu.style.top = '100%';
+        listMenu.style.right = '0%'
     }
 
     function hideMenuList(){

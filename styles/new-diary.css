@@ -47,3 +47,19 @@ body{
     width: 40%;
 }
 
+@media screen and (max-width:1024px){
+    .diary__btn{
+        width: 70%;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .diary label{
+        font-size: 20px;
+    }
+
+    .diary__field{
+        width: 80%;
+    }
+}
+

@@ -151,7 +151,7 @@ footer{
 }
 
 
-@media screen and (max-width:400px){
+@media screen and (max-width:1024px){
     .form label{
         font-size: 20px;
     }

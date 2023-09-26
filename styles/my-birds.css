@@ -4,7 +4,6 @@
 body{
     display: flex;
     flex-direction: column;
-    min-height: 100%;
 }
 
 
@@ -127,7 +126,7 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:1024px){
     .filter__btn{
         font-size: 16px;
     }

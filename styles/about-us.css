@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Nanum+Myeongjo&display=swap');;
 @import url('./global.css');
 
-
-
-body{
-
+body { 
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
+
 .about-content{
     display: flex;
     gap: 5%;
@@ -37,4 +34,15 @@ body{
 .about-content__text{
     font-size: 24px;
     width: 50%;
+}
+
+@media screen and (max-width:1024px){
+    .about-content__logo{
+        display: none;
+    }
+
+    .about-content__text{
+        width: 100%;
+                
+    }
 }

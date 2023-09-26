@@ -14,12 +14,13 @@
             <h2 class="logo_name">Bird Diary</h2>
     </div>
         <nav class="header__menu">
-            <ul class="menu__list">
+            <ul class="menu__list" id="list-menu">
                 <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
                 <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
                 <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
                 <li class="menu__item"><a class="menu__link" onclick="logoutUser(event)">Sair</a></li>
         </nav>
+        <img class="header__menu-hamb" src="../img/Hamburger_icon.svg.png" id="hamb-menu-icon">
     </header>
 
     <main class="container">
@@ -68,6 +69,7 @@
     <script src="../scripts/loading.js"></script>
     <script src="../scripts/new-diary.js"></script>
     <script src="../scripts/connectGeocodingAPI.js"></script>
+    <script src="../scripts/mobile-global.js"></script>
     
 </body>
 </html>

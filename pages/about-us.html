@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/about-us.css">
+    <link rel="stylesheet" href="../styles/global.css">    
     <title>About us</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -14,16 +20,18 @@
             <h2 class="logo_name">Bird Diary</h2>
     </div>
         <nav class="header__menu">
-            <ul class="menu__list">
+            <ul class="menu__list" id="list-menu">
                 <li class="menu__item"><a class="menu__link" href="./my-birds.html">My birds</a></li>
                 <li class="menu__item"><a class="menu__link" href="./new-diary.html">New diary</a></li>
                 <li class="menu__item"><a class="menu__link" href="./about-us.html">About us</a></li>
                 <li class="menu__item"><a class="menu__link" onclick="logoutUser()">Log out</a></li>
         </nav>
+        <img class="header__menu-hamb" src="../img/Hamburger_icon.svg.png" id="hamb-menu-icon">
     </header>
 
     <main class="container">
         <h1 class="container__title">About us</h1>
+
         <section class="about-content">
             <div class="about-content__logo">
                 <img class="about-content__img" src="../img/image 5.svg">
@@ -34,11 +42,11 @@
                 <p>Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum</p>
             </div>
         </section>
-
-        <footer>
-            <p>Contact us</p>
-        </footer>
     </main>
+
+    <footer>
+        <p>Contact us</p>
+    </footer>
     <!--Início dos scripts do firebase-->
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
@@ -49,6 +57,7 @@
     <script src="../scripts/loading.js"></script>
     <script src="../scripts/logout.js"></script>
     <script src="../scripts/auth-guard.js"></script>
+    <script src="../scripts/mobile-global.js"></script>
     
     
 </body>
