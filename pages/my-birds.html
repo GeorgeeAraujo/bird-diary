@@ -29,12 +29,12 @@
             <h1 class="container__title">My birds</h1>
         
         <section class="filter">
-            <button class="filter__btn" id="show-all" onclick="filter(id)">All</button>
-            <button class="filter__btn" id="filter-oldest" onclick="filter(id)">Oldest</button>
-            <button class="filter__btn" id="search-btn-filter" onclick="filter(id)">Search</button>
+            <button class="filter__btn" id="show-all" >All</button>
+            <button class="filter__btn" id="filter-oldest" >Oldest</button>
+            <button class="filter__btn" id="search-btn-filter" >Search</button>
         </section>
         <div class="filter-search" id="search">
-            <input type="search" class="filter-search-field" id="search-field" onchange="isSearchEmpty()">
+            <input type="search" class="filter-search-field" id="search-field">
             <button class="filter-search-btn" id="search-btn">Search</button>
         </div>
         <section class="birds-list" id="birds-list"></section>
@@ -54,8 +54,8 @@
     <script src="../scripts/logout.js"></script>
     <script src="../scripts/auth-guard.js"></script>
     <script src="../scripts/loading.js"></script>
-    <script src="../scripts/my-birds.js"></script>
-    <script src="../scripts/filter-birds.js"></script>
+    <script type="module" src="../scripts/my-birds.js"></script>
+    <script type="module" src="../scripts/filter-birds.js"></script>
     <script src="../scripts/mobile-global.js"></script>
     
 

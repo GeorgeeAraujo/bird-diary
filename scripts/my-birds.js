@@ -1,10 +1,6 @@
-const filterBtns = Array.from(document.querySelectorAll('.filter__btn'));
+import { arrayOfFilterBtns, filterBtnsObject, addClickedClass, removeClickedClass } from "./filter-birds.js";
+export{createBirdsOnScreen, findBirds};
 
-const filterBtnsObject = {
-    all: ()=> document.getElementById('show-all'),
-    oldest:()=> document.getElementById('filter-oldest'),
-    search: ()=> document.getElementById('search-btn-filter')
-}
 firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/
     if(user){
         findBirds(user);
@@ -12,9 +8,9 @@ firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário loga
 });
 
 
-function findBirds(user){ /* Função que cria realiza a busca no banco de dados, de acordo com o usuário.*/
+function findBirds(user){ /* Função que realiza a busca no banco de dados, de acordo com o usuário.*/
     showLoading();
-    removeClickedClass(filterBtns);
+    removeClickedClass(arrayOfFilterBtns);
     addClickedClass(filterBtnsObject.all())
     firebase.firestore()
     .collection('birds')
@@ -131,17 +127,6 @@ function removeImage(path){ /* Função que remove a imagem do pássaro desejado
         .catch((error) => console.log(error));
 };
 
-function addClickedClass(element){
-    element.classList.add('clicked');
-};
-
-function removeClickedClass(element){
-    if(typeof element == "object"){
-        element.forEach(el => el.classList.remove('clicked'));
-    } else{
-        element.classList.remove('clicked');
-    };
-};
 
 function areThereBirdsToShow(birds){
     return birds.length != 0;
@@ -157,6 +142,5 @@ function createNoBirdsMessage(){
 
 }
 
-/*MOBILE CODE */
 
 
