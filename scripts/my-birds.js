@@ -1,4 +1,4 @@
-import { arrayOfFilterBtns, filterBtnsObject, addClickedClass, removeClickedClass } from "./filter-birds.js";
+import { arrayOfFilterBtns, objectOfFilterBtns, addClickedClass, removeClickedClass } from "./filter-birds.js";
 export{createBirdsOnScreen, findBirds};
 
 firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/
@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário loga
 function findBirds(user){ /* Função que realiza a busca no banco de dados, de acordo com o usuário.*/
     showLoading();
     removeClickedClass(arrayOfFilterBtns);
-    addClickedClass(filterBtnsObject.all())
+    addClickedClass(objectOfFilterBtns.all())
     firebase.firestore()
     .collection('birds')
     .where('user.uid', '==', user.uid)

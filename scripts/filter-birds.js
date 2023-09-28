@@ -1,9 +1,9 @@
 import { createBirdsOnScreen, findBirds } from "./my-birds.js";
-export {arrayOfFilterBtns, filterBtnsObject, removeClickedClass, addClickedClass};
+export {arrayOfFilterBtns, objectOfFilterBtns, removeClickedClass, addClickedClass};
 
 let userLogged;
 const arrayOfFilterBtns = Array.from(document.querySelectorAll('.filter__btn'));
-const filterBtnsObject = {
+const objectOfFilterBtns = {
     all: ()=> document.getElementById('show-all'),
     oldest:()=> document.getElementById('filter-oldest'),
     search: ()=> document.getElementById('search-btn-filter'),
@@ -11,24 +11,9 @@ const filterBtnsObject = {
     
 };
 
-
-firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/
-    if(user){
-        userLogged = user;
-    };
-});
-
-
-
-filterBtnsObject.searchField().addEventListener('change', (event)=> isSearchEmpty(event.target));
-
-
-arrayOfFilterBtns.forEach(filterButton => {
-    filterButton.addEventListener('click', (event) => {
-        filter(event.target.id)
-    })
-})
-
+getUserLogged(); /* Faz a captura do usuário logado e armazena na variavel userLogged.*/
+searchChangeListener();
+toggleFilters();
 
 function filter(id){
     if(id == 'show-all'){
@@ -55,7 +40,7 @@ function hideFilterSearchBar(){
 
 function filterBySearch(){
     removeClickedClass(arrayOfFilterBtns);
-    addClickedClass(filterBtnsObject.search());
+    addClickedClass(objectOfFilterBtns.search());
     showLoading();
     const searchBtn = document.getElementById('search-btn');
     const searchField = document.getElementById('search-field');
@@ -77,7 +62,7 @@ function filterBySearch(){
 function sortByOldest(){
         showLoading();
         removeClickedClass(arrayOfFilterBtns);
-        addClickedClass(filterBtnsObject.oldest())
+        addClickedClass(objectOfFilterBtns.oldest())
     firebase.firestore()
         firebase.firestore()
         .collection('birds')
@@ -103,8 +88,7 @@ function sortByOldest(){
 
 function isSearchEmpty(searchField){
     if(searchField.value == ''){
-        let birds = getBirdsElements();
-        birds.forEach(bird => showBirdElement(bird));
+        cleanSearchResult();
     };
 };
 
@@ -130,4 +114,29 @@ function removeClickedClass(element){
     } else{
         element.classList.remove('clicked');
     };
+};
+
+function getUserLogged(){
+    firebase.auth().onAuthStateChanged((user) => {
+        if(user){
+            userLogged = user;
+        };
+    });
+};
+
+function searchChangeListener(){
+    objectOfFilterBtns.searchField().addEventListener('change', (event)=> isSearchEmpty(event.target));
+}
+
+function cleanSearchResult(){
+    let birds = getBirdsElements();
+    birds.forEach(bird => showBirdElement(bird));
+}
+
+function toggleFilters(){
+    arrayOfFilterBtns.forEach(filterButton => {
+        filterButton.addEventListener('click', (event) => {
+            filter(event.target.id)
+        })
+    });
 };

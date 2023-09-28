@@ -1,9 +1,9 @@
 firebase.auth()
     .onAuthStateChanged((user) => {
         if(user){
-            window.location.href= './my-birds.html'
+            window.location.href= '../pages/my-birds.html'
         };
-    });
+    }); /*Caso exista um usuário logado, ele é redirecionado para a página inicial. */
 
 const newUserForm = { /* Objeto com todos os elementos HTML do processo de criação de novo usuário. */
     email: () => document.getElementById('new-email').value,
@@ -22,7 +22,7 @@ async function createNewUser(event){ /* Função que realiza a criação de novo
     showLoading();
     await firebase.auth()
     .createUserWithEmailAndPassword(newUserForm.email(), newUserForm.password())
-    .then(r => {
+    .then(() => {
         hideLoading();
         alert('The user has been created!');
         window.location.href = "../index.html";
