@@ -1,5 +1,5 @@
 import { createBirdsOnScreen, findBirds } from "./my-birds.js";
-export {arrayOfFilterBtns, filterBtnsObject, removeClickedClass, addClickedClass}
+export {arrayOfFilterBtns, filterBtnsObject, removeClickedClass, addClickedClass};
 
 let userLogged;
 const arrayOfFilterBtns = Array.from(document.querySelectorAll('.filter__btn'));
@@ -9,7 +9,7 @@ const filterBtnsObject = {
     search: ()=> document.getElementById('search-btn-filter'),
     searchField: ()=> document.getElementById('search-field'),
     
-}
+};
 
 
 firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/

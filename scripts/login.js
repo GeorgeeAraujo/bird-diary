@@ -18,30 +18,41 @@ const loginForm = { /* Objeto que contém todos os elementos HTML relacionados a
     createAccountBtn: ()=> document.getElementById('go-to-create-account-btn')
 };
 
-/* Chamada da função de login ao clicar no botão de Login */
-loginForm.loginButton().addEventListener('click', (event)=>{
-    event.preventDefault();
-    login();
-});
+/*Funções que adicionam ouvintes de evento de clique nos botões da página de login*/
+loginListener(); 
+recoverPasswordListener(); 
+createAnAccountListener();
 
-loginForm.recoverBtn().addEventListener('click', (e)=>{
-    e.preventDefault();
-    window.location.href = "../pages/recover-password.html";
-})
-
-loginForm.createAccountBtn().addEventListener('click', (e)=>{
-    e.preventDefault();
-    window.location.href = "../pages/create-an-account.html";
-})
 
 async function login(){ /*Função que faz a comunicação com o firebase authentication para a realização do login ou não.*/ 
     showLoading();
     await firebase.auth()
     .signInWithEmailAndPassword(loginForm.email(), loginForm.password())
-    .then(response => window.location.href = "./pages/my-birds.html")
+    .then(() => window.location.href = "./pages/my-birds.html")
     .catch(error => {
         hideLoading();
         alert(getErrorMessage(error.code))});
+};
+
+function loginListener(){
+    loginForm.loginButton().addEventListener('click', (event)=>{
+        event.preventDefault();
+        login();
+    });
+}
+
+function recoverPasswordListener(){
+    loginForm.recoverBtn().addEventListener('click', (event)=>{
+        event.preventDefault();
+        window.location.href = "../pages/recover-password.html";
+    });
+};
+
+function createAnAccountListener(){
+    loginForm.createAccountBtn().addEventListener('click', (event)=>{
+        event.preventDefault();
+        window.location.href = "../pages/create-an-account.html";
+    });
 };
 
 
