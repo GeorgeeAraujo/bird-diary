@@ -1,57 +1,54 @@
 import { createBirdsOnScreen, findBirds } from "./my-birds.js";
-export {arrayOfFilterBtns, objectOfFilterBtns, removeClickedClass, addClickedClass};
+export {arrayOfFilterBtns, objectOfFilterElements, removeClickedClass, addClickedClass};
 
 let userLogged;
 const arrayOfFilterBtns = Array.from(document.querySelectorAll('.filter__btn'));
-const objectOfFilterBtns = {
+const objectOfFilterElements = {
     all: ()=> document.getElementById('show-all'),
     oldest:()=> document.getElementById('filter-oldest'),
     search: ()=> document.getElementById('search-btn-filter'),
     searchField: ()=> document.getElementById('search-field'),
-    
+    searchBar: ()=>document.getElementById('search-bar'),
+    searchResultBtn: ()=>document.getElementById('search-result-btn')
 };
 
 getUserLogged(); /* Faz a captura do usuário logado e armazena na variavel userLogged.*/
-searchChangeListener();
-toggleFilters();
+searchChangeListener(); /*Captura mudanãs na barra de busca, limpando o resultado da busca caso esteja vazia. */
+filtersListener(); /*Redireciona para a função de filtro (toggleFilters) quando algum dos botões é clicado. */
 
-function filter(id){
+function toggleFilters(id){ /*Alterna entre os filtros possíveis.*/
     if(id == 'show-all'){
         hideFilterSearchBar();
         findBirds(userLogged);
     } else if (id == 'filter-oldest'){
         hideFilterSearchBar();
         sortByOldest();
-    } else{
+    } else if(id == 'search-btn-filter'){
         showFilterSearchBar();
         filterBySearch();
     };
 };
 
 function showFilterSearchBar(){
-    const searchBar = document.getElementById('search');
-    searchBar.style.display = "block";
+    objectOfFilterElements.searchBar().style.display = "block";
 };
 
 function hideFilterSearchBar(){
-    const searchBar = document.getElementById('search');
-    searchBar.style.display = "none";
+    objectOfFilterElements.searchBar().style.display = "none";
 };
 
 function filterBySearch(){
     removeClickedClass(arrayOfFilterBtns);
-    addClickedClass(objectOfFilterBtns.search());
+    addClickedClass(objectOfFilterElements.search());
     showLoading();
-    const searchBtn = document.getElementById('search-btn');
-    const searchField = document.getElementById('search-field');
-    searchBtn.addEventListener('click',()=>{
-        let birds = getBirdsElements();
-        const keyword = searchField.value;
-        birds.forEach(bird => showBirdElement(bird));
-        let birdsDontMatch = birds.filter(bird => !bird.innerText.includes(keyword));
-        if(birds.length != birdsDontMatch.length){
+    objectOfFilterElements.searchResultBtn().addEventListener('click',()=>{
+        const birds = getBirdsElements();
+        const searchKeyword = objectOfFilterElements.searchField().value;
+        const birdsDontMatch = getBirdsDontMatch(birds, searchKeyword);
+        cleanSearchResult(birds);  /*É necessário limpar o resultado antes, para a busca ser realizada corretamente em todos os elementos. */      
+        if(areThereResultsForTheSearch(birds, birdsDontMatch)){
             birdsDontMatch.forEach(bird => hideBirdElement(bird))
-        } else {
+        } else if (!areThereResultsForTheSearch(birds, birdsDontMatch)){
             alert('No birds were found! Try again.')
         }
         
@@ -60,9 +57,9 @@ function filterBySearch(){
 }
 
 function sortByOldest(){
-        showLoading();
-        removeClickedClass(arrayOfFilterBtns);
-        addClickedClass(objectOfFilterBtns.oldest())
+    showLoading();
+    removeClickedClass(arrayOfFilterBtns);
+    addClickedClass(objectOfFilterElements.oldest())
     firebase.firestore()
         firebase.firestore()
         .collection('birds')
@@ -88,7 +85,7 @@ function sortByOldest(){
 
 function isSearchEmpty(searchField){
     if(searchField.value == ''){
-        cleanSearchResult();
+        cleanSearchResult(getBirdsElements());
     };
 };
 
@@ -125,18 +122,29 @@ function getUserLogged(){
 };
 
 function searchChangeListener(){
-    objectOfFilterBtns.searchField().addEventListener('change', (event)=> isSearchEmpty(event.target));
+    objectOfFilterElements.searchField().addEventListener('change', (event)=> isSearchEmpty(event.target));
 }
 
-function cleanSearchResult(){
-    let birds = getBirdsElements();
+function cleanSearchResult(birds){
     birds.forEach(bird => showBirdElement(bird));
 }
 
-function toggleFilters(){
+function filtersListener(){
     arrayOfFilterBtns.forEach(filterButton => {
         filterButton.addEventListener('click', (event) => {
-            filter(event.target.id)
+            toggleFilters(event.target.id)
         })
     });
 };
+
+function areThereResultsForTheSearch(birds, birdsDontMatch){
+    if(birds.length != birdsDontMatch.length){
+        return true;
+    } else{
+        return false;
+    };
+};
+
+function getBirdsDontMatch(birds, searchKeyword){
+    return birds.filter(bird => !bird.innerText.includes(searchKeyword));
+}
