@@ -1,4 +1,4 @@
-import { arrayOfFilterBtns, objectOfFilterElements, addClickedClass, removeClickedClass } from "./filter-birds.js";
+import { arrayOfFilterBtns, objectOfFilterElements, addClickedClass, removeClickedClass, getBirdsElements } from "./filter-birds.js";
 export{createBirdsOnScreen, findBirds};
 
 firebase.auth().onAuthStateChanged((user) => { /* Faz a captura do usuário logado e passa a informação para a busca no banco de dados..*/
@@ -40,7 +40,7 @@ function createBirdsOnScreen(birds){ /* Função que cria os elementos na tela, 
         birds.forEach((bird) => {
             const birdDiv = document.createElement('div');
             birdDiv.classList.add("bird");
-            birdDiv.id = bird.uid; /* Acrescenta o mesmo id do documento no elemento, para que seja possível remover se o usuário quiser.*/
+            birdDiv.id = bird.uid; /* Acrescenta o mesmo id do documento no elemento, para que seja possível manipular o elemento posteriormente (modificar ou deletar).*/
             birdDiv.addEventListener('click', () => window.location.href = `../pages/new-diary.html?uid=${bird.uid}`); /* Cria o elemento já com um ouvinte de evento, para que seja possível a modificação dos dados.*/
     
             const img = document.createElement('img');
@@ -89,8 +89,7 @@ function createBirdsOnScreen(birds){ /* Função que cria os elementos na tela, 
         createNoBirdsMessage();
     }
 
-}
-
+};
 
 function askRemoveBird(bird){ /* Realiza a confirmação da ação de remover o pássaro.*/
     const shouldRemove = confirm('Do you really want to delete this bird?')
@@ -107,9 +106,9 @@ function removeBird(bird){ /* Função que deleta o documento desejado do databa
     .delete()
     .then(() => {
         hideLoading();
-        document.getElementById(bird.uid).remove();
+        removeBirdElement(bird);
         removeImage(bird.storagePath);
-        const birds = Array.from(document.querySelectorAll('.bird'));
+        const birds = getBirdsElements();
         if(areThereBirdsToShow(birds) == 0){
             createNoBirdsMessage()
         }
@@ -141,6 +140,11 @@ function createNoBirdsMessage(){
     birdsList.appendChild(noBirdsMessage)
 
 }
+
+function removeBirdElement(bird){
+    const birdToRemove = document.getElementById(bird.uid);
+    birdToRemove.remove();
+};
 
 
 

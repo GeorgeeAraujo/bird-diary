@@ -1,5 +1,5 @@
 import { createBirdsOnScreen, findBirds } from "./my-birds.js";
-export {arrayOfFilterBtns, objectOfFilterElements, removeClickedClass, addClickedClass};
+export {arrayOfFilterBtns, objectOfFilterElements, removeClickedClass, addClickedClass, getBirdsElements};
 
 let userLogged;
 const arrayOfFilterBtns = Array.from(document.querySelectorAll('.filter__btn'));
