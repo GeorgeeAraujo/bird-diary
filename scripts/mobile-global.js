@@ -1,4 +1,4 @@
-if(window.matchMedia("(max-width:1024px").matches){ //Verifica se o é um dispositivo mobile.
+if(window.matchMedia("(max-width:1024px").matches){ //Verifica se é um dispositivo mobile.
     const hambMenuIcon = document.getElementById('hamb-menu-icon');
     const listMenu = document.getElementById('list-menu');
     
