@@ -1,10 +1,10 @@
 if(!isNewBird()){ /* Detecta se é criação de um pássaro novo, ou modificação de um já existente.*/
     const uid = getBirdUid();
     findBirdByUid(uid);
-    document.querySelector(".container__title").innerHTML = 'Update bird';
+    changeTheTitleToUpdate();
 };
 
-const newDiaryForm = { /* Objeto que contém todos os elementos HTML do formulário de criação de novo diário.*/
+const newDiaryForm = { /* Objeto que contém todos os elementos HTML do formulário de criação ou modificação de diário.*/
     date: ()=>document.getElementById('date'),
     sciname: ()=>document.getElementById('sci-name'),
     popname: ()=>document.getElementById('pop-name'),
@@ -129,7 +129,7 @@ function findBirdByUid(uid){ /* Função que recupera no database o documento do
     .then(doc => {
         hideLoading();
         if(doc.exists){
-            fillBirdOnScreen(doc.data());
+            fillBirdOnTheForm(doc.data());
         } else {
             alert('Bird not found!');
             window.location.href = '../pages/my-birds.html';
@@ -144,7 +144,7 @@ function findBirdByUid(uid){ /* Função que recupera no database o documento do
     );
 };
 
-function fillBirdOnScreen(bird){ /* Função que preenche o formulário com as informações recuperadas do pássaro para modificação.*/
+function fillBirdOnTheForm(bird){ /* Função que preenche o formulário com as informações recuperadas do pássaro para modificação.*/
     newDiaryForm.date().value = bird.date;
     newDiaryForm.sciname().value = bird.sciname;
     newDiaryForm.popname().value = bird.popname;
@@ -152,7 +152,11 @@ function fillBirdOnScreen(bird){ /* Função que preenche o formulário com as i
     newDiaryForm.lat().value = bird.lat;
     newDiaryForm.long().value = bird.long;
     newDiaryForm.imgUrl = bird.img;
-    newDiaryForm.storagePath = bird.storagePath
+    newDiaryForm.storagePath = bird.storagePath;
+};
+
+function changeTheTitleToUpdate(){
+    document.querySelector(".container__title").innerHTML = 'Update bird';
 };
             
 /* Fim das funções de MODIFICAÇÃO de pássaros.*/
