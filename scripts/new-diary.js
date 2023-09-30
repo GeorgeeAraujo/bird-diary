@@ -17,10 +17,10 @@ const newDiaryForm = { /* Objeto que contém todos os elementos HTML do formulá
     saveButton: ()=> document.getElementById('save-btn')
 };
 
-saveButtonListener();
+saveButtonListener(); /* Ouvinte de evento que chama a função de salvar o diário no database, quando o botão de Salvar é clicado.*/
 
-async function saveDiary(e, user){ /* Função que salva novo pássaro ou atualiza um existente.*/
-    e.preventDefault();
+async function saveDiary(event, user){ /* Função que salva novo pássaro ou atualiza um existente.*/
+    event.preventDefault();
     if(isNewBird()){
         save(user);
     } else{
@@ -41,7 +41,8 @@ async function save(user){ /* Função que salva novo pássaro no database.*/
     })
     .catch(error => {
         hideLoading();
-        alert('Error!');
+        console.log(error);
+        alert('Error! Try again.');
     });
 };
 
@@ -80,7 +81,7 @@ async function uploadImage(user){ /* Função que salva ou atualiza a imagem do 
 function deleteImageOnStorage(){ /* Função que deleta a imagem no Firebase Storage.*/
     firebase.storage().ref().child(newDiaryForm.storagePath)
     .delete()
-    .then((r)=>console.log(r))
+    .then((response)=>console.log(response))
     .catch((error) => console.log(error));
 };
 
@@ -102,7 +103,8 @@ async function update(user){ /* Função que atualiza um pássaro no database.*/
     })
     .catch(error => {
         hideLoading();
-        alert('Error!');
+        console.log(error);
+        alert('Error! Try again.');
     });
 };
 
@@ -157,7 +159,7 @@ function changeTheTitleToUpdate(){
 /* Fim das funções de MODIFICAÇÃO de pássaros.*/
 
 function saveButtonListener(){
-    newDiaryForm.saveButton().addEventListener('click', event => { /* Ouvinte de evento que chama a função de salvar o diário no database, quando o botão de Salvar é clicado.*/
+    newDiaryForm.saveButton().addEventListener('click', event => { 
         showLoading();
         firebase.auth().onAuthStateChanged((user) => {
             saveDiary(event, user)});
