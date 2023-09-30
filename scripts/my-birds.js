@@ -126,7 +126,6 @@ function removeImage(path){ /* Função que remove a imagem do pássaro desejado
         .catch((error) => console.log(error));
 };
 
-
 function areThereBirdsToShow(birds){
     return birds.length != 0;
 }
