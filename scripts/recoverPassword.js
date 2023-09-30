@@ -13,12 +13,7 @@ const recoverForm = { /* Objeto que contém todos os elementos HTML do formulár
     obrigatoryRecoveryEmailError: ()=> document.getElementById('obrigatory-recovery-email-error')
 };
 
-
-
-recoverForm.recoverBtn().addEventListener('click', e => { /* Ouvinte de eventos que chama a função de enviar o emailde recuperação quando o usuário clica no botão..*/
-    e.preventDefault();
-    sendRecoveryPasswordEmail();
-});
+recoverPasswordListener();
 
 function validateRecoverForm(){ /*Validação do formulário de recuperação de senha. Habilita ou desabilita o botão de enviar. */
     if(validateEmail(recoverForm.email(), recoverForm.obrigatoryRecoveryEmailError(), recoverForm.invalidRecoveryEmailError())){
@@ -33,4 +28,11 @@ async function sendRecoveryPasswordEmail(){ /* Envia, a partir do Firebase Authe
     .then(r => alert('Email sent! Verify your email box or your span box.'))
     .catch(error => alert(getErrorMessage(error.code)));
 };
+
+function recoverPasswordListener(){
+    recoverForm.recoverBtn().addEventListener('click', event => { /* Ouvinte de eventos que chama a função de enviar o email de recuperação quando o usuário clica no botão..*/
+    event.preventDefault();
+    sendRecoveryPasswordEmail();
+});
+}
 
