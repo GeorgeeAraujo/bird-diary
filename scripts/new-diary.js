@@ -17,12 +17,7 @@ const newDiaryForm = { /* Objeto que contém todos os elementos HTML do formulá
     saveButton: ()=> document.getElementById('save-btn')
 };
 
-newDiaryForm.saveButton().addEventListener('click', e => { /* Ouvinte de evento que chama a função de salvar o diário no database, quando o botão de Salvar é clicado.*/
-    showLoading();
-    firebase.auth().onAuthStateChanged((user) => {
-        saveDiary(e, user)});
-});
-
+saveButtonListener();
 
 async function saveDiary(e, user){ /* Função que salva novo pássaro ou atualiza um existente.*/
     e.preventDefault();
@@ -160,6 +155,14 @@ function changeTheTitleToUpdate(){
 };
             
 /* Fim das funções de MODIFICAÇÃO de pássaros.*/
+
+function saveButtonListener(){
+    newDiaryForm.saveButton().addEventListener('click', event => { /* Ouvinte de evento que chama a função de salvar o diário no database, quando o botão de Salvar é clicado.*/
+        showLoading();
+        firebase.auth().onAuthStateChanged((user) => {
+            saveDiary(event, user)});
+    });
+};
 
 
 
