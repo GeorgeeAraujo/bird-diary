@@ -30,21 +30,21 @@
         <form class="form diary">
             <div class="diary-first-column">
                 <label>Date:</label>
-                <input type="date" class="form__field diary__field" id="date">
+                <input type="date" class="form__field diary__field" id="date" required>
                 <label>Scientific name:</label>
-                <input type="text" class="form__field diary__field" id="sci-name">
+                <input type="text" class="form__field diary__field" id="sci-name" required>
                 <label>Popular name:</label>
-                <input type="text" class="form__field diary__field" id="pop-name">
+                <input type="text" class="form__field diary__field" id="pop-name" required>
                 <label>Place:</label>
-                <input type="text" class="form__field diary__field" id="place" onchange="getCoordinates()">
+                <input type="text" class="form__field diary__field" id="place" onchange="getCoordinates()" required>
                 <label>Latitude:</label>
-                <input type="number" class="form__field diary__field" id="lat">
+                <input type="number" class="form__field diary__field" id="lat" required>
                 <label>Longitude:</label>
-                <input type="number" class="form__field diary__field" id="long">
+                <input type="number" class="form__field diary__field" id="long" required>
             </div>
             <div class="diary-second-column">
                 <label>Picture:</label>
-                <input type="file" class="form__field diary__field" id="img-uploaded">
+                <input type="file" class="form__field diary__field" id="img-uploaded" required>
                 <button class="diary__btn btn-solid" id="save-btn">Save</button>
             </div>
         </form>
