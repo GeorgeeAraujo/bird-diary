@@ -1,5 +1,5 @@
 function validateLoginForm(){ /*Função que realiza a habilitação do botão de login a partir da validação do email e senha*/
-    if(validatePassword(loginForm.password(), loginForm.obrigatoryPassword(), loginForm.invalidPassword()) & validateEmail(loginForm.email(), loginForm.obrigatoryEmail(), loginForm.invalidEmail())){
+    if(validatePassword(loginForm.password(), loginForm.obligatoryPassword(), loginForm.invalidPassword()) & validateEmail(loginForm.email(), loginForm.obligatoryEmail(), loginForm.invalidEmail())){
         loginForm.loginButton().removeAttribute("disabled");
     } else {
         loginForm.loginButton().setAttribute("disabled","disabled");
@@ -18,8 +18,8 @@ function validateNewUserForm(){ /* Função que faz a ativação do botão de re
 
 /* Início das funções da validação do EMAIL */
 
-function validateEmail(email, obrigatoryError, invalidError){ /* Validação do email */
-    toggleEmailError(email, obrigatoryError, invalidError);
+function validateEmail(email, obligatoryError, invalidError){ /* Validação do email */
+    toggleEmailError(email, obligatoryError, invalidError);
     if(!isFieldEmpty(email) && isEmailValidy(email)){
         return true;
     } else{
@@ -27,11 +27,11 @@ function validateEmail(email, obrigatoryError, invalidError){ /* Validação do 
     }
 };
 
-function toggleEmailError(email, obrigatoryError, invalidError){ /* Alterna na tela os possíveis erros contidos no email fornecido pelo usuário */
+function toggleEmailError(email, obligatoryError, invalidError){ /* Alterna na tela os possíveis erros contidos no email fornecido pelo usuário */
     if(isFieldEmpty(email)){
-        showError(obrigatoryError);
+        showError(obligatoryError);
     } else if (!isFieldEmpty(email)){
-        hideError(obrigatoryError);
+        hideError(obligatoryError);
     };
     if(!isEmailValidy(email)){
         showError(invalidError);
@@ -50,8 +50,8 @@ function isEmailValidy(email){ /* Verifica se o email possui uma estrutura de em
 
 /* Início das funções da validação da SENHA */
 
-function validatePassword(password, obrigatoryError, invalidError){ /* Validação da senha */
-    togglePasswordError(password, obrigatoryError, invalidError);
+function validatePassword(password, obligatoryError, invalidError){ /* Validação da senha */
+    togglePasswordError(password, obligatoryError, invalidError);
     if(!isFieldEmpty(password) && isPasswordValidy(password)){
         return true;
     } else{
@@ -59,11 +59,11 @@ function validatePassword(password, obrigatoryError, invalidError){ /* Validaç�
     }
 };
 
-function togglePasswordError(password, obrigatoryError, invalidError){ /* Alterna na tela os possíveis erros contidos na senha fornecida pelo usuário */
+function togglePasswordError(password, obligatoryError, invalidError){ /* Alterna na tela os possíveis erros contidos na senha fornecida pelo usuário */
     if(isFieldEmpty(password)){
-        showError(obrigatoryError);
+        showError(obligatoryError);
     } else if (!isFieldEmpty(password)){
-        hideError(obrigatoryError);
+        hideError(obligatoryError);
     };
     if(!isPasswordValidy(password)){
         showError(invalidError);

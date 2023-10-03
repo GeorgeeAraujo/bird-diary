@@ -10,13 +10,13 @@ const recoverForm = { /* Objeto que contém todos os elementos HTML do formulár
     goToRecoverBtn: ()=> document.getElementById('go-to-recover-btn'),
     recoverBtn: () => document.getElementById('recovery-password-btn'),
     invalidRecoveryEmailError: ()=> document.getElementById('invalid-recovery-email-error'),
-    obrigatoryRecoveryEmailError: ()=> document.getElementById('obrigatory-recovery-email-error')
+    obligatoryRecoveryEmailError: ()=> document.getElementById('obligatory-recovery-email-error')
 };
 
 recoverPasswordListener();
 
 function validateRecoverForm(){ /*Validação do formulário de recuperação de senha. Habilita ou desabilita o botão de enviar. */
-    if(validateEmail(recoverForm.email(), recoverForm.obrigatoryRecoveryEmailError(), recoverForm.invalidRecoveryEmailError())){
+    if(validateEmail(recoverForm.email(), recoverForm.obligatoryRecoveryEmailError(), recoverForm.invalidRecoveryEmailError())){
         recoverForm.recoverBtn().removeAttribute("disabled");
     } else {
         recoverForm.recoverBtn().setAttribute("disabled","disabled");
@@ -25,7 +25,7 @@ function validateRecoverForm(){ /*Validação do formulário de recuperação de
 
 async function sendRecoveryPasswordEmail(){ /* Envia, a partir do Firebase Authentication, o email de vereificação de senha. */
     await firebase.auth().sendPasswordResetEmail(recoverForm.email())
-    .then(r => alert('Email sent! Verify your email box or your span box.'))
+    .then(r => alert('Email sent! Check your email or span box.'))
     .catch(error => alert(getErrorMessage(error.code)));
 };
 

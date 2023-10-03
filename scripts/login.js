@@ -11,9 +11,9 @@ const loginForm = { /* Objeto que contém todos os elementos HTML relacionados a
     password: () => document.getElementById('password').value,
     invalidEmail: () => document.getElementById('invalid-email-error'),
     loginButton: () => document.getElementById('login-btn'),
-    obrigatoryEmail: () => document.getElementById('obrigatory-email-error'),
+    obligatoryEmail: () => document.getElementById('obligatory-email-error'),
     invalidPassword: () => document.getElementById('invalid-password-error'),
-    obrigatoryPassword: () => document.getElementById('obrigatory-password-error'),
+    obligatoryPassword: () => document.getElementById('obligatory-password-error'),
     recoverBtn: ()=> document.getElementById('go-to-recover-btn'),
     createAccountBtn: ()=> document.getElementById('go-to-create-account-btn')
 };
