@@ -76,7 +76,7 @@ body{
 
 footer{
     background-color: var(--second-color);
-    text-align: right;
+    text-align: center;
     padding: 1.5em;
     font-family: var(--main-font);
     width: 100%;
@@ -196,6 +196,10 @@ footer{
 
     .container__title{
         font-size: 30px;
+    }
+
+    footer{
+        font-size: 12px;
     }
 
 }
