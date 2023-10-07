@@ -55,8 +55,38 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
 ## 🎨 Layout
 
 ### Website para desktops.
-<img src="./screenshots/login.png" align="center">
-<img src="./screenshots/my-birds.gif" align="center">
+<h4>Página de login</h4>
+<img src="./screenshots/login.png" width="800px">
+<h4 align="center">Página de recuperação de senha</h4>
+<img src="./screenshots/recover-password.png" width="800px">
+<h4 align="center">Página de cadastro de usuário</h4>
+<img src="./screenshots/create-account.png"  width="800px">
+<h4 align="center">Página inicial</h4>
+<img src="./screenshots/my-birds.gif" width="800px">
+<h4 align="center">Página de registro de pássaros</h4>
+<img src="./screenshots/new-diary.gif" width="800px">
+<h4 align="center">Página de informações sobre o site</h4>
+<img src="./screenshots/about-us.gif" width="800px">
+
+### Website mobile.
+<h4 align="center">Página de login, recuperação de senha e cadastro de usuário</h4>
+<p align="center">
+     <img src="./screenshots/login-mobile.png">
+     <img src="./screenshots/recover-password-mobile.png">
+     <img src="./screenshots/create-account-mobile.png">
+</p>
+
+<h4 align="center">Página inicial</h4>
+<p align="center">
+     <img src="./screenshots/my-birds-mobile.gif">
+</p>
+<h4 align="center">Página de registro de novos pássaros</h4>
+<p align="center"><img src="./screenshots/new-diary-mobile.png"></p>
+<h4 align="center">Página de registro de novos pássaros</h4>
+<p align="center">
+     <img src="./screenshots/new-diary-mobile.gif">
+</p>
+
 
 
 
