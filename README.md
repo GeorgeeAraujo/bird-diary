@@ -75,16 +75,11 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
      <img src="./screenshots/recover-password-mobile.png">
      <img src="./screenshots/create-account-mobile.png">
 </p>
-
-<h4 align="center">Página inicial</h4>
+<h4 align="center">Página inicial, de registro de novos pássaros e de informações sobre o site</h4>
 <p align="center">
-     <img src="./screenshots/my-birds-mobile.gif">
-</p>
-<h4 align="center">Página de registro de novos pássaros</h4>
-<p align="center"><img src="./screenshots/new-diary-mobile.png"></p>
-<h4 align="center">Página de registro de novos pássaros</h4>
-<p align="center">
-     <img src="./screenshots/new-diary-mobile.gif">
+     <img src="./screenshots/my-birds-mobile.png">
+     <img src="./screenshots/new-diary-mobile.png">
+     <img src="./screenshots/about-us-mobile.png">
 </p>
 
 
