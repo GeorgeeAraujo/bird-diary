@@ -55,9 +55,7 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
 ## 🎨 Layout
 
 ### Website para desktops.
-<img src="./screenshots/login.svg" align="center">
-<img src="./screenshots/create-account.svg" align="center">
-<img src="./screenshots/recover-password.svg" align="center">
+<img src="./screenshots/login.png" align="center">
 <img src="./screenshots/my-birds.gif" align="center">
 
 
