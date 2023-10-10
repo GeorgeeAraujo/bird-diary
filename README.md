@@ -13,11 +13,11 @@
 =================
 <!--ts-->
 - [🐦 Sobre o projeto](#-sobre-o-projeto)
-- [⚙️ Funcionalidades](#-funcionalidades)
+- [⚙️ Funcionalidades](#%EF%B8%8F-funcionalidades)
 - [🛠️ Tecnologias](#%EF%B8%8F-tecnologias)
-    + [**Website**](#-website)
-    + [**Servidor**](#-servidor)
-    + [**Utilitários**](#-utilitarios)
+    + [**Website**](#website)
+    + [**Servidor**](#servidor)
+    + [**Utilitários**](#utilitarios)
 - [🎨 Layout](#-layout)
   * [Website para desktops.](#website-para-desktops)
   * [Website mobile.](#website-mobile)
@@ -131,7 +131,7 @@ George Alves de Araujo. 🚀
 
 ---
 
-## 📝 Licenca
+## 📝 Licença
 
 Este projeto está sob a lincença [MIT](./LICENSE).
 
