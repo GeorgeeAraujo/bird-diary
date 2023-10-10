@@ -129,6 +129,7 @@ George Alves de Araujo. 🚀
 
 ## 📝 Licença
 
+Este projeto está sob a lincença [MIT](./LICENSE).
 
 ---
 
