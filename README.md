@@ -15,19 +15,19 @@
 - [🐦 Sobre o projeto](#-sobre-o-projeto)
 - [⚙️ Funcionalidades](#%EF%B8%8F-funcionalidades)
 - [🛠️ Tecnologias](#%EF%B8%8F-tecnologias)
-    + [**Website**](#website)
-    + [**Servidor**](#servidor)
-    + [**Utilitários**](#utilitários)
+    + [Website](#website)
+    + [Servidor](#servidor)
+    + [Utilitários](#utilitários)
 - [🎨 Layout](#-layout)
-  * [Website para desktops.](#website-para-desktops)
-  * [Website mobile.](#website-mobile)
+  * [Website para desktops](#website-para-desktops)
+  * [Website mobile](#website-mobile)
 - [🦸 Autor](#-autor)
 - [📝 Licença](#-licença)
 <!--te-->
 
 ## 🐦 Sobre o projeto
 
-Bird Diary é um website direcionado à observadores de aves. O objetivo principal do projeto é fornecer uma ferramenta simples e rápida para registro de pássaros observados em um determinado dia e local. 
+Bird Diary é um website direcionado à observadores de aves. O objetivo principal do projeto é fornecer uma ferramenta simples e rápida para o registro de pássaros observados em um determinado dia e local. 
 
 ---
 ## ⚙️ Funcionalidades
@@ -39,11 +39,12 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
         
 - [x] Depois da etapa de autenticação, os usuários tem acesso às seguintes funcionalidades:
   - [x] Adicionar pássaros observados com as informações de:
+      - Data.
       - Nome popular.
       - Nome científico.
       - Local.
-      - Latitude e longitude do local (preenchidas automáticamente).
-      - Imagem.
+      - Latitude e longitude do local (preenchidas automaticamente).
+      - Imagem (via upload).
   - [x] Visualizar todos os pássaros cadastrados por ele (com opções de filtro e busca por palavras).
   - [x] Atualizar as informações dos pássaros cadastrados.
   - [x] Deletar os pássaros cadastrados.
@@ -63,6 +64,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 - JavaScript (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
      - Manipulação do DOM.
      - Métodos de array.
+     - Objetos.
      - Validação de formulários.
      - Requisições GET e POST.
      - Consumo de API's.
