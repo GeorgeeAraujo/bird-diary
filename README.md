@@ -12,16 +12,17 @@
 Índice
 =================
 <!--ts-->
-* [Sobre o projeto](#-sobre-o-projeto)
-* [Funcionalidades](#-funcionalidades)
-* [Layout](#-layout)
-     * [Website](#web)
-     * [Web
-* [Tecnologias](#-tecnologias)
-     * [WebSite](#user-content-website)
-     * [Servidor](#user-content-server)
-* [Autor](#-autor)
-* [Licença](#user-content--licença)
+- [🐦 Sobre o projeto](#-sobre-o-projeto)
+- [⚙️ Funcionalidades](#-funcionalidades)
+- [🛠️ Tecnologias](#-tecnologias)
+    + [**Website**](#-website)
+    + [**Servidor**](#-servidor)
+    + [**Utilitários**](#-utilit-rios)
+- [🎨 Layout](#-layout)
+  * [Website para desktops.](#website-para-desktops)
+  * [Website mobile.](#website-mobile)
+- [🦸 Autor](#-autor)
+- [📝 Licença](#-licen-a)
 <!--te-->
 
 ## 🐦 Sobre o projeto
