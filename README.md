@@ -14,7 +14,7 @@
 <!--ts-->
 - [🐦 Sobre o projeto](#-sobre-o-projeto)
 - [⚙️ Funcionalidades](#-funcionalidades)
-- [🛠️ Tecnologias](#-tecnologias)
+- [🛠️ Tecnologias](#%EF%B8%8F-tecnologias)
     + [**Website**](#-website)
     + [**Servidor**](#-servidor)
     + [**Utilitários**](#-utilitarios)
