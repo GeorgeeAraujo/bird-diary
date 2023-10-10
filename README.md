@@ -22,7 +22,7 @@
   * [Website para desktops.](#website-para-desktops)
   * [Website mobile.](#website-mobile)
 - [🦸 Autor](#-autor)
-- [📝 Licença](#-licen-a)
+- [📝 Licença](#-licenca)
 <!--te-->
 
 ## 🐦 Sobre o projeto
@@ -131,7 +131,7 @@ George Alves de Araujo. 🚀
 
 ---
 
-## 📝 Licença
+## 📝 Licenca
 
 Este projeto está sob a lincença [MIT](./LICENSE).
 
