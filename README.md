@@ -17,7 +17,7 @@
 - [🛠️ Tecnologias](#%EF%B8%8F-tecnologias)
     + [**Website**](#website)
     + [**Servidor**](#servidor)
-    + [**Utilitários**](#utilitarios)
+    + [**Utilitários**](#utilitários)
 - [🎨 Layout](#-layout)
   * [Website para desktops.](#website-para-desktops)
   * [Website mobile.](#website-mobile)
