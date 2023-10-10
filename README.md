@@ -93,6 +93,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 
 - Free Geocoding API (https://geocode.maps.co/).
 - Visual Studio Code (https://code.visualstudio.com/).
+- Git e GitHub (https://git-scm.com/).
 
 --- 
 
