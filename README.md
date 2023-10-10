@@ -11,6 +11,7 @@
      <img src="https://img.shields.io/badge/HTML-orange?logo=html">
      <img src="https://img.shields.io/badge/CSS-blue?logo=css">
      <img src="https://img.shields.io/badge/Firebase-darkgreen?logo=firebase">
+     <img src="https://img.shields.io/badge/Git-red?logo=git&logoColor=white">
 </p>
 
 Índice
