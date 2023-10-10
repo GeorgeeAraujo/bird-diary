@@ -54,6 +54,7 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
 <p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="##">aqui.⬅️ </a></p>
 
 ---
+
 ## 🛠️ Tecnologias
 
 As seguintes tecnologias foram utilizadas no projeto:
@@ -86,6 +87,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 - Free Geocoding API (https://geocode.maps.co/).
 - Visual Studio Code (https://code.visualstudio.com/).
 
+--- 
 
 ## 🎨 Layout
 
@@ -117,6 +119,7 @@ As seguintes tecnologias foram utilizadas no projeto:
      <img src="./screenshots/about-us-mobile.png">
 </p>
 
+---
 
 ## 🦸 Autor
 
