@@ -17,7 +17,7 @@
 - [🛠️ Tecnologias](#-tecnologias)
     + [**Website**](#-website)
     + [**Servidor**](#-servidor)
-    + [**Utilitários**](#-utilit-rios)
+    + [**Utilitários**](#-utilitarios)
 - [🎨 Layout](#-layout)
   * [Website para desktops.](#website-para-desktops)
   * [Website mobile.](#website-mobile)
@@ -82,7 +82,7 @@ As seguintes tecnologias foram utilizadas no projeto:
      - Firebase Database.
      - Firebase Cloud Storage.
  
-#### **Utilitários**
+#### **Utilitarios**
 
 - Free Geocoding API (https://geocode.maps.co/).
 - Visual Studio Code (https://code.visualstudio.com/).
