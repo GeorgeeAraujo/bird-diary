@@ -22,7 +22,7 @@
   * [Website para desktops.](#website-para-desktops)
   * [Website mobile.](#website-mobile)
 - [🦸 Autor](#-autor)
-- [📝 Licença](#-licenca)
+- [📝 Licença](#-licença)
 <!--te-->
 
 ## 🐦 Sobre o projeto
@@ -82,7 +82,7 @@ As seguintes tecnologias foram utilizadas no projeto:
      - Firebase Database.
      - Firebase Cloud Storage.
  
-#### **Utilitarios**
+#### **Utilitários**
 
 - Free Geocoding API (https://geocode.maps.co/).
 - Visual Studio Code (https://code.visualstudio.com/).
