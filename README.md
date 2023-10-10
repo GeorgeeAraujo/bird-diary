@@ -1,5 +1,5 @@
 <h1 align="center">
-     :bird: <a href="#" alt="site do bird diary"> Bird Diary </a>
+     :bird: <a href="https://bird-diary.vercel.app/" alt="site do bird diary"> Bird Diary </a>
 </h1>
 <h3 align="center">
     Um diário simples e rápido para observadores de pássaros. 
@@ -57,7 +57,7 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
 
 - [x] Responsividade para dispositivos móveis (tablets e celulares).
 
-<p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="##">aqui.⬅️ </a></p>
+<p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="https://bird-diary.vercel.app/">aqui.⬅️ </a></p>
 
 ---
 
