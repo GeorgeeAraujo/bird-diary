@@ -61,5 +61,9 @@ body{
     .diary__field{
         width: 80%;
     }
+
+    .diary-first-column{
+        margin: 0;
+    }
 }
 
