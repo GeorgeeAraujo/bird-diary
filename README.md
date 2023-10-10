@@ -6,7 +6,7 @@
 </h3>
 <p align="center">
      <img alt="License" src="https://img.shields.io/badge/license-MIT-lightgreen">
-     <img alt="License" src="https://img.shields.io/badge/status-conclu%C3%ADdo-blue">
+     <img alt="status do projeto" src="https://img.shields.io/badge/status-conclu%C3%ADdo-blue">
 </p>
 
 Índice
@@ -15,7 +15,8 @@
 * [Sobre o projeto](#-sobre-o-projeto)
 * [Funcionalidades](#-funcionalidades)
 * [Layout](#-layout)
-     * [Web](#web)
+     * [Website](#web)
+     * [Web
 * [Tecnologias](#-tecnologias)
      * [WebSite](#user-content-website)
      * [Servidor](#user-content-server)
@@ -52,6 +53,39 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
 <p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="##">aqui.⬅️ </a></p>
 
 ---
+## 🛠️ Tecnologias
+
+As seguintes tecnologias foram utilizadas no projeto:
+
+#### **Website** 
+- JavaScript (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+     - Manipulação do DOM.
+     - Métodos de array.
+     - Validação de formulários.
+     - Requisições GET e POST.
+     - Consumo de API's.
+     - Responsividade.
+     - Conceitos relacionados à aplicações CRUD. 
+- HTML (https://developer.mozilla.org/pt-BR/docs/Web/HTML).
+- CSS (https://developer.mozilla.org/pt-BR/docs/Web/CSS).
+     - Flexbox.
+     - Position.
+     - Media queries.
+     - Estilização de maneira geral.
+
+#### **Servidor**
+
+- Firebase (https://firebase.google.com/docs?hl=pt-br)
+     - Firebase Authentication.
+     - Firebase Database.
+     - Firebase Cloud Storage.
+ 
+#### **Utilitários**
+
+- Free Geocoding API (https://geocode.maps.co/).
+- Visual Studio Code (https://code.visualstudio.com/).
+
+
 ## 🎨 Layout
 
 ### Website para desktops.
@@ -81,6 +115,24 @@ Bird Diary é um website direcionado à observadores de aves. O objetivo princip
      <img src="./screenshots/new-diary-mobile.png">
      <img src="./screenshots/about-us-mobile.png">
 </p>
+
+
+## 🦸 Autor
+
+George Alves de Araujo. 🚀
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white&link=mailto%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fgeorge-alves-de-araujo-35b58919b%2F
+)](https://github.com/GeorgeeAraujo) [![LinkedIn Badge](https://img.shields.io/badge/George-blue?logo=linkedin&logoColor=white&link=mailto%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fgeorge-alves-de-araujo-35b58919b%2F
+)](https://www.linkedin.com/in/george-alves-de-araujo-35b58919b/)
+
+---
+
+## 📝 Licença
+
+
+---
+
+
 
 
 
