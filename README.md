@@ -7,6 +7,10 @@
 <p align="center">
      <img alt="License" src="https://img.shields.io/badge/license-MIT-lightgreen">
      <img alt="status do projeto" src="https://img.shields.io/badge/status-conclu%C3%ADdo-blue">
+     <img alt="javascript" src="https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=white">
+     <img src="https://img.shields.io/badge/HTML-orange?logo=html">
+     <img src="https://img.shields.io/badge/CSS-blue?logo=css">
+     <img src="https://img.shields.io/badge/Firebase-darkgreen?logo=firebase">
 </p>
 
 Índice
