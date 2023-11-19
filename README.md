@@ -102,15 +102,15 @@ As seguintes tecnologias foram utilizadas no projeto:
 ### Website para desktops.
 <h4>Página de login</h4>
 <img src="./screenshots/login.png" width="800px">
-<h4 align="center">Página de recuperação de senha</h4>
+<h4>Página de recuperação de senha</h4>
 <img src="./screenshots/recover-password.png" width="800px">
-<h4 align="center">Página de cadastro de usuário</h4>
+<h4>Página de cadastro de usuário</h4>
 <img src="./screenshots/create-account.png"  width="800px">
-<h4 align="center">Página inicial</h4>
+<h4>Página inicial</h4>
 <img src="./screenshots/my-birds.gif" width="800px">
-<h4 align="center">Página de registro de pássaros</h4>
+<h4>Página de registro de pássaros</h4>
 <img src="./screenshots/new-diary.gif" width="800px">
-<h4 align="center">Página de informações sobre o site</h4>
+<h4>Página de informações sobre o site</h4>
 <img src="./screenshots/about-us.gif" width="800px">
 
 ### Website mobile.
